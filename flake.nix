@@ -13,7 +13,7 @@
         ${pkgs.imagemagick}/bin/magick tmp.png -crop 800x240+330+150 tmp.png
         ${pkgs.imagemagick}/bin/magick tmp.png -fuzz 30% -fill transparent +opaque "#8DC63FFF" tmp.png
         ${pkgs.imagemagick}/bin/magick tmp.png -alpha off -threshold 50% -negate tmp.png
-        ${pkgs.tesseract}/bin/tesseract --psm 7 tmp.png stdout nobatch digits
+        ${pkgs.tesseract}/bin/tesseract --psm 8 tmp.png stdout nobatch digits
         rm tmp.png
       '';
   };
